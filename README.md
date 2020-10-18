@@ -1,0 +1,1 @@
+This is actually a personal project to improve git commits to Holberton Students
