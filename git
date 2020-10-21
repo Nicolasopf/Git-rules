@@ -1,0 +1,33 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+    gita
+fi
+
+if [ "$1" = "add" ]; then
+    if [ "$2" == "." ] || [ "$2" == "*" ] || [ "$2" == "-A" ] || [ "$2" == "--all" ]; then
+	echo "For good practices, using \".\", \"*\", \"-A\" and \"--all\" is forbidden. Inste\
+ad, It is rec\
+ommended to add file by file, in that way, You will use a commit for each file, later, You will re\
+member wh\
+at your program do :)"
+	exit
+    elif  [ -z "${2}" ]; then
+	echo "Please, add a file"
+    elif [ "$2" != "." ] || [ "$2" != * ] || [ "$2" != "-A" ] || [ "$2" != "--all" ]; then
+	gita $1 $2
+    fi
+fi
+
+if [ "$1" == "commit" ] && [ "$2" == "-m" ]; then
+    chars=${#3}
+    if [ "$chars" -ge "13" ]; then
+	gita commit -m "$3"
+    elif [ "$chars" -lt "10" ]; then
+	echo "Your commit should contain at least 13 characters!"
+    fi
+fi
+
+if [ "$1" != "commit" ] && [ "$1" != "add" ]; then
+    echo $@
+fi
