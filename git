@@ -21,7 +21,7 @@ fi
 
 if [ "$1" == "commit" ] && [ "$2" == "-m" ]; then
     chars=${#3}
-    if [ "$chars" -ge "13" ]; then
+    if [ "$chars" -ge "10" ]; then
 	gita commit -m "$3"
     elif [ "$chars" -lt "10" ]; then
 	echo "Your commit should contain at least 13 characters!"
