@@ -1,4 +1,4 @@
-This is actually a personal project to improve git commits to Holberton Students
+# This is actually a personal project, I hope this program will help to persons improve their good practices at git :)
 
 Goals of this project:
 
@@ -7,7 +7,7 @@ Goals of this project:
 - Verify if commit has at least 10 characters
 - Creates a manual
 - Flag to ignore requirements
-- At least three words
+- At least three words for the commit
 - Only allow use git add with files and not with -A, ".", *, --all
 - Let You use the git command with other arguments
 - Create a strict mode
