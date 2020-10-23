@@ -5,6 +5,5 @@ if [[ -f git ]]; then
 else
     mv /usr/bin/git .
     mv /usr/bin/gita /usr/bin/git
-    echo "If git no works, pleae restart your terminal :)"
 fi
 
